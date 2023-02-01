@@ -13,5 +13,5 @@ brew tap janw/janw
 And install formula:
 
 ```bash
- brew install <formula>
+ brew install janw/janw/<formula>
 ```
