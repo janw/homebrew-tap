@@ -3,10 +3,11 @@ class PodcastArchiver < Formula
 
   desc "Archive all episodes from your favorite podcasts"
   homepage "https://github.com/janw/podcast-archiver"
-  url "https://files.pythonhosted.org/packages/fe/e9/9f46a1e5e3540424a64e2d2e1864abcd8da7efca95f6f6b6ae123de3819b/podcast_archiver-1.2.0.tar.gz"
-  sha256 "1015e7b19299219b22198e29cd90afe68badb48a8710a963d7634ea3062ad009"
   license "MIT"
   head "https://github.com/janw/podcast-archiver.git", branch: "main"
+
+  url "https://files.pythonhosted.org/packages/a1/33/b42038813207a0dfaab26c829e06bcb3309aba122c4a00876c738b5dd353/podcast_archiver-1.2.1.tar.gz"
+  sha256 "0b9df025268042ba99e38bbcc6ad9e8381ed9612782024dfcc023748c1e00395"
 
   depends_on "python3"
   depends_on "rust" => :build
@@ -62,13 +63,13 @@ class PodcastArchiver < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/aa/3f/56142232152145ecbee663d70a19a45d078180633321efb3847d2562b490/pydantic-2.5.3.tar.gz"
-    sha256 "b3ef57c62535b0941697cce638c08900d87fcb67e29cfa99e8a68f747f393f7a"
+    url "https://files.pythonhosted.org/packages/78/6c/87e7c6e46206e27b3037acdf637906c4be500a0b1dd7ccbb805a72b9f494/pydantic-2.6.0.tar.gz"
+    sha256 "ae887bd94eb404b09d86e4d12f93893bdca79d766e738528c6fa1c849f3c6bcf"
   end
 
   resource "pydantic-core" do
-    url "https://files.pythonhosted.org/packages/b2/7d/8304d8471cfe4288f95a3065ebda56f9790d087edc356ad5bd83c89e2d79/pydantic_core-2.14.6.tar.gz"
-    sha256 "1fd0c1d395372843fba13a51c28e3bb9d59bd7aebfeb17358ffaaa1e4dbbe948"
+    url "https://files.pythonhosted.org/packages/a0/a7/61d013c73773bb03d02de9de8e4e5b2ed2c100dc98ae7046d54485ecf5d4/pydantic_core-2.16.1.tar.gz"
+    sha256 "daff04257b49ab7f4b3f73f98283d3dbb1a65bf3500d55c7beac3c66c310fe34"
   end
 
   resource "pygments" do
@@ -121,12 +122,13 @@ class PodcastArchiver < Formula
     sha256 "df7aa8afb0148fa78488e7899b2c59b5f4ffcfa82e6c54ccb9dd37c1d7b52d54"
   end
 
+
+
   def install
     virtualenv_create(libexec, "python3")
     virtualenv_install_with_resources
 
     generate_completions_from_executable(bin/"podcast-archiver", shells: [:bash, :zsh, :fish], shell_parameter_format: :click)
-
   end
 
   test do
