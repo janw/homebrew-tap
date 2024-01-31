@@ -7,11 +7,11 @@ Custom formulae for the Homebrew package manager.
 Tap the repo:
 
 ```bash
-brew tap janw/janw
+brew tap janw/tap
 ```
 
 And install formula:
 
 ```bash
- brew install janw/janw/<formula>
+ brew install janw/tap/<formula>
 ```
