@@ -6,8 +6,8 @@ class PodcastArchiver < Formula
   license "MIT"
   head "https://github.com/janw/podcast-archiver.git", branch: "main"
 
-  url "https://files.pythonhosted.org/packages/2f/80/8f94fd82d9e9c1777db499f81a688bbd91c62dd169013ea13f04a8d6d1b3/podcast_archiver-1.7.1.tar.gz"
-  sha256 "b04eabb7fb36b1bbe28e90633b2d1165b3cc9db3fcd3b1aa2a196a6f5c62af54"
+  url "https://files.pythonhosted.org/packages/b1/92/56a75c4354bc0f59390a2b5ecf7892bbec2c0d8c0d2c9226c982a811ad53/podcast_archiver-1.7.2.tar.gz"
+  sha256 "1e6bd0a17aa9bdd46d490dd95e85067afa088ccf645d95646959994bd07f0737"
 
   depends_on "python@3.12"
 
