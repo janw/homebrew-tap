@@ -33,7 +33,7 @@ class Gdal < Formula
   depends_on "epsilon"
   depends_on "expat"
   depends_on "freexl"
-  depends_on "geos"
+  depends_on "janw/tap/geos"  # NOTE: must point to this tap
   depends_on "giflib"
   depends_on "hdf5"
   depends_on "jpeg-turbo"
